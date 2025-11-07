@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>About — Ceramic soul</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;1,400&display=swap"
+          rel="stylesheet"/>
+    <link rel="stylesheet" href="/src/sass/style.scss"/>
+</head>
+<body>
+<header class="header" data-header>
+    <div class="header__inner">
+        <button class="burger" data-burger aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+            <span></span><span></span><span></span>
+        </button>
+
+        <a href="/index.html" class="header__logo">
+            <img src="/src/logo/logo.png" alt="Ceramic Soul logo"/>
+        </a>
+
+        <div class="header__icons">
+            <a class="header__icon" href="#"><span class="icon-search" aria-hidden="true"></span><span class="sr-only">Search</span></a>
+            <a class="header__icon" href="#"><span class="icon-shopping-bag" aria-hidden="true"></span><span
+                    class="sr-only">Cart</span></a>
+        </div>
+
+        <nav id="site-nav" class="nav" data-nav>
+            <ul class="nav__list" role="list">
+                <li><a class="nav__link" href="/catalog.html">Catalog</a></li>
+                <li><a class="nav__link" href="/blog.html">Blog</a></li>
+                <li><a class="nav__link" href="/about.html">About</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<main>
+    <section class="container" style="padding-block:40px 80px;">
+        <h1 class="title-h1-italic" style="text-align:center;">WHERE IT ALL BEGAN</h1>
+        <!-- сюда основной текст + изображение -->
+    </section>
+</main>
+
+<script type="module" src="/src/js/script.js"></script>
+</body>
+</html>

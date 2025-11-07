@@ -1,0 +1,73 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.masthead {
+    --left: 720px;
+    --gap: 73px;
+    --right: 240px;
+    --col: calc(100vw - var(--left) - var(--gap) - var(--right));
+
+    display: grid;
+    grid-template-columns: var(--left) 1fr;
+    column-gap: var(--gap);
+}
+
+.masthead__left {
+    align-self: start;
+}
+
+.masthead__left img {
+    display: block;
+    width: 640px;
+    height: 900px;
+}
+
+.masthead__right {
+    padding-top: 40px;
+    padding-right: var(--right);
+}
+
+.header__inner {
+    width: var(--col);
+}
+
+.masthead__promo {
+    width: var(--col);
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    grid-template-rows: max-content max-content;
+    column-gap: 30px;
+    margin-top: 80px;
+    align-items: end;
+}
+
+.masthead__promo > .title-h1-italic {
+    font-weight: $font-weight-regular;
+    font-size: $font-size-smth;
+    grid-column: 1;
+    grid-row: 1;
+    align-self: end;
+    justify-self: end;
+    width: max-content;
+    text-align: left;
+    margin: 0;
+}
+
+.masthead__promo-img {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    width: 330px;
+    height: 460px;
+    object-fit: cover;
+}
+
+.masthead__promo-btn {
+    width: 330px;
+    height: 61px;
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: end;
+    margin-top: 50px;
+}
+
+

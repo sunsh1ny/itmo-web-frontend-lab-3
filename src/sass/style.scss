@@ -1,0 +1,22 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as m;
+
+@use "/src/sass/libs/modern-normalize.min.css";
+@use "/src/sass/libs/fontello.css";
+@use "/src/sass/base/basic.scss";
+
+@use "/src/sass/blocks/header.scss";
+@use "/src/sass/blocks/footer.scss";
+
+@use "/src/sass/ui/titles.scss";
+@use "/src/sass/ui/buttons.scss";
+
+@use "/src/sass/blocks/masthead.scss";
+@use "/src/sass/blocks/create-buy.scss";
+@use "/src/sass/blocks/contact.scss";
+
+@use "swiper/css";
+@use "swiper/css/navigation";
+@use "swiper/css/pagination";
+
+@use "/src/sass/blocks/works.scss";

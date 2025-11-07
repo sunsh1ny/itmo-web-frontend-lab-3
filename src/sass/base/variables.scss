@@ -1,0 +1,25 @@
+$dark: #232323;
+$light: #fafafa;
+$ui-active: #d9d9d9;
+$ceramic: #c69978;
+$ui-disabled: #d2d2d2;
+$ui-button-border: #e2e1e5;
+$ui-error: #db0c35;
+$ui-links: #a22dc6;
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+
+$font-size-smth: 32px;
+
+$font-style-normal: normal;
+$font-style-italic: italic;
+
+$font-family-primary: "Barlow", sans-serif;
+
+$bp: (sm: 480px, md: 768px, lg: 1024px);
+@mixin up($k) {
+    @media (min-width: map-get($bp, $k)) {
+        @content;
+    }
+}

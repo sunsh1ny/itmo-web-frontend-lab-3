@@ -1,0 +1,104 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as m;
+
+.works {
+    --w: 1282px;
+    margin: 100px auto 0;
+}
+
+.works__frame {
+    width: var(--w);
+    margin-inline: auto;
+}
+
+.works__title {
+    @include m.title;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.works__stage {
+    position: relative;
+}
+
+.works__slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    align-items: stretch;
+}
+
+.swiper-slide {
+    height: auto;
+}
+
+.works__img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.works__nav {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    display: grid;
+    place-items: center;
+    color: $dark;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.works__nav--prev {
+    left: calc(-30px - 24px);
+}
+
+.works__nav--next {
+    right: calc(-30px - 24px);
+}
+
+.works__nav svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.works__nav--next svg {
+    transform: scaleX(-1);
+}
+
+.works__nav.swiper-button-disabled {
+    opacity: .35;
+    pointer-events: none;
+}
+
+.works__pagination {
+    --swiper-pagination-bullet-inactive-color: #{$dark};
+    --swiper-pagination-bullet-inactive-opacity: 1;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+.works__pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    border-radius: 0;
+    opacity: 1;
+    background: $dark;
+    margin: 0;
+}
+
+.works__pagination .swiper-pagination-bullet-active {
+    background: $ceramic;
+    opacity: 1;
+}

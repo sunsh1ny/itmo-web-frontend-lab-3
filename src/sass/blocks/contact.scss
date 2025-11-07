@@ -1,0 +1,144 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as m;
+
+.contact {
+    --w: 1365px;
+    margin: 100px auto 0;
+}
+
+.contact__frame {
+    width: var(--w);
+    margin-inline: auto;
+    background: $light;
+    box-sizing: border-box;
+}
+
+.contact__title {
+    @include m.title;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.contact__grid {
+    position: relative;
+    font-family: "Inter", sans-serif;
+    display: grid;
+    grid-template-columns: 620px 1fr;
+    column-gap: 100px;
+    align-items: start;
+}
+
+.contact__img {
+    object-fit: cover;
+    display: block;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, .25);
+}
+
+.contact__form {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.contact__row {
+    display: grid;
+    grid-template-columns: .92fr 1fr;
+    gap: 45px;
+}
+
+.contact__row--full {
+    grid-template-columns: 1fr;
+    margin-block-start: 12px;
+}
+
+.contact__field {
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+.contact__label {
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+    color: $dark;
+}
+
+.contact__input,
+.contact__textarea {
+    width: 300px;
+    height: 40px;
+    border: 1px solid $ui-button-border;
+    background: $light;
+    color: $dark;
+    padding: 10px 15px;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+.contact__input {
+    height: 44px;
+}
+
+.contact__textarea {
+    height: 132px;
+    resize: none;
+}
+
+.contact__agree {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+    line-height: 28px;
+    color: $dark;
+    margin: 20px 0;
+}
+
+.contact__agree a {
+    color: $ui-links;
+    text-decoration: none;
+}
+
+.contact__checkbox {
+    accent-color: $dark;
+}
+
+
+.contact__submit {
+    font-family: $font-family-primary;
+    color: $dark;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+    width: 220px;
+    height: 40px;
+}
+
+
+.contact__input::placeholder,
+.contact__textarea::placeholder {
+    font-size: 14px;
+    color: $ui-disabled;
+}
+
+.is-error {
+    border-color: $ui-error;
+}
+
+
+.is-success {
+    border-color: $ui-active;
+}
+
+.just-validate-error-label {
+    display: none;
+}
+
+.contact__sticker {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+}

@@ -1,0 +1,75 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.header {
+    &__inner {
+        width: calc(100vw - 720px - 153px - 155px);
+        box-sizing: border-box;
+
+        display: grid;
+        grid-template-columns: max-content 1fr max-content;
+        grid-template-rows: max-content max-content;
+        align-items: start;
+    }
+
+    &__logo {
+        grid-column: 1 / 4;
+        grid-row: 1;
+        margin-left: 92px;
+        width: 150px;
+        height: 150px;
+        display: inline-block;
+    }
+
+    &__icons {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: end;
+        display: inline-flex;
+        gap: 13px;
+        color: $dark;
+    }
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        color: $dark;
+    }
+}
+
+.burger {
+    display: none;
+}
+
+.nav {
+    grid-column: 1 / 4;
+    grid-row: 2;
+    margin-top: 39px;
+    padding: 0;
+
+    &__list {
+        display: flex;
+        gap: 60px;
+        justify-content: flex-start;
+    }
+
+    &__link {
+        font-size: 20px;
+        color: $dark;
+        text-transform: uppercase;
+        font-weight: $font-weight-regular;
+        text-decoration: none;
+        line-height: 1;
+    }
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
