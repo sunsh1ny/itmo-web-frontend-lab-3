@@ -1,15 +1,19 @@
 @use "/src/sass/base/variables.scss" as *;
 
 .masthead {
+    --page: 1920px;
     --left: 720px;
     --gap: 73px;
     --right: 240px;
-    --col: calc(100vw - var(--left) - var(--gap) - var(--right));
+
+    width: min(100%, var(--page));
+    margin-inline: auto;
 
     display: grid;
     grid-template-columns: var(--left) 1fr;
     column-gap: var(--gap);
 }
+
 
 .masthead__left {
     align-self: start;
@@ -26,12 +30,12 @@
     padding-right: var(--right);
 }
 
-.header__inner {
-    width: var(--col);
+.masthead .header__inner,
+.masthead__promo {
+    width: 100%;
 }
 
 .masthead__promo {
-    width: var(--col);
     display: grid;
     grid-template-columns: 1fr max-content;
     grid-template-rows: max-content max-content;

@@ -1,38 +1,53 @@
 @use "/src/sass/base/variables.scss" as *;
 
-.header {
-    &__inner {
-        width: calc(100vw - 720px - 153px - 155px);
-        box-sizing: border-box;
+:root {
+    --header-logo-w: 150px;
+    --header-logo-h: 150px;
+    --nav-offset-top: 39px;
+    --search-right: 390px;
+    --icon-gap: 15px;
+}
 
-        display: grid;
-        grid-template-columns: max-content 1fr max-content;
-        grid-template-rows: max-content max-content;
-        align-items: start;
+.header {
+    width: 1920px;
+    margin: 0 auto;
+    position: relative;
+
+    &__inner {
+        width: 100%;
+        height: calc(var(--header-logo-h) + var(--nav-offset-top) + 44px);
+        box-sizing: border-box;
+        position: relative;
     }
 
     &__logo {
-        grid-column: 1 / 4;
-        grid-row: 1;
-        margin-left: 92px;
-        width: 150px;
-        height: 150px;
-        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: var(--header-logo-w);
+        height: var(--header-logo-h);
+        display: block;
     }
 
     &__icons {
-        grid-column: 3;
-        grid-row: 1;
-        justify-self: end;
-        display: inline-flex;
-        gap: 13px;
-        color: $dark;
+
     }
 
     &__icon {
+        position: absolute;
+        top: 12px;
         width: 24px;
         height: 24px;
         color: $dark;
+
+        &:first-child {
+            right: var(--search-right);
+        }
+
+        &:nth-child(2) {
+            right: calc(var(--search-right) - var(--icon-gap));
+        }
     }
 }
 
@@ -41,15 +56,18 @@
 }
 
 .nav {
-    grid-column: 1 / 4;
-    grid-row: 2;
-    margin-top: 39px;
+    position: absolute;
+    left: 50%;
+    top: calc(var(--header-logo-h) + var(--nav-offset-top));
+    transform: translateX(-50%);
+    margin: 0;
     padding: 0;
 
     &__list {
         display: flex;
         gap: 60px;
-        justify-content: flex-start;
+        align-items: center;
+        justify-content: center;
     }
 
     &__link {

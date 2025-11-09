@@ -32,7 +32,7 @@
                 </div>
                 <nav id="site-nav" class="nav" data-nav>
                     <ul class="nav__list" role="list">
-                        <li><a class="nav__link" href="#">Catalog</a></li>
+                        <li><a class="nav__link" href="catalog.html">Catalog</a></li>
                         <li><a class="nav__link" href="#">Blog</a></li>
                         <li><a class="nav__link" href="#">About</a></li>
                     </ul>
@@ -135,22 +135,66 @@
 </section>
 
 <footer class="footer" aria-labelledby="footer-title">
-    <footer class="footer__frame">
+    <div class="footer__frame">
+        <h2 id="footer-title" class="sr-only">Footer</h2>
+
         <div class="footer__top">
             <div class="footer__newsletter">
                 <h3 class="footer__title">NEWSLETTER</h3>
                 <p class="footer__text">Keep up to date with news and promotions</p>
+                <form id="newsletterForm" class="footer__form" action="#" novalidate>
+                    <input class="footer__input" id="newsletterEmail" type="email" placeholder="Enter your e-mail"
+                           aria-label="Email">
+                    <label class="footer__agree" for="newsletterAgree">
+                        <input class="footer__checkbox" id="newsletterAgree" type="checkbox">
+                        <span>I agree with the <a class="footer__terms" href="#">terms</a></span>
+                    </label>
+                    <button class="footer__btn" type="submit">SUBMIT</button>
+                </form>
             </div>
-            <div class="footer__links">
-                <h3 class="footer__title">DISCOVER</h3>
-            </div>
+
+            <nav class="footer__links" aria-label="Footer navigation">
+                <div class="footer__col">
+                    <h3 class="footer__title">DISCOVER</h3>
+                    <ul class="footer__list" role="list">
+                        <li><a class="footer__link" href="#">About Us</a></li>
+                        <li><a class="footer__link" href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">SHOPPING</h3>
+                    <ul class="footer__list" role="list">
+                        <li><a class="footer__link" href="catalog.html">Catalog</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">INFORMATION</h3>
+                    <ul class="footer__list" role="list">
+                        <li><a class="footer__link" href="#">Terms and Conditions</a></li>
+                    </ul>
+                </div>
+            </nav>
+
             <div class="footer__social">
-                <h3 class="footer__title">SHOPPING</h3>
+                <h3 class="footer__title">FOLLOW US</h3>
+                <div class="footer__icons">
+                    <a class="footer__icon" href="#" aria-label="Facebook">
+                        <img src="src/img/icons/facebook.svg" alt="Facebook">
+                    </a>
+                    <a class="footer__icon" href="#" aria-label="Instagram">
+                        <img src="src/img/icons/instagram.svg" alt="Instagram">
+                    </a>
+                    <a class="footer__icon" href="#" aria-label="Pinterest">
+                        <img src="src/img/icons/pinterest.svg" alt="Pinterest">
+                    </a>
+                </div>
             </div>
         </div>
+
         <div class="footer__bottom">© Copyright 2025, Ceramic soul</div>
-    </footer>
+    </div>
 </footer>
+
 
 <script type="module" src="/src/js/script.js"></script>
 </body>

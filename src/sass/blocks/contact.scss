@@ -101,7 +101,34 @@
 }
 
 .contact__checkbox {
-    accent-color: $dark;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 1px solid $dark;
+    border-radius: 2px;
+    background: transparent;
+    display: inline-grid;
+    place-content: center;
+    outline: none;
+}
+
+.contact__checkbox::after {
+    content: "";
+    width: 3px;
+    height: 8px;
+    border-right: 2px solid $light;
+    border-bottom: 2px solid $light;
+    transform: rotate(45deg) scale(0);
+    transition: transform .12s ease-in-out;
+}
+
+.contact__checkbox:checked {
+    background: $dark !important;
+}
+
+.contact__checkbox:checked::after {
+    transform: rotate(45deg) scale(1);
 }
 
 

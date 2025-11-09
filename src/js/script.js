@@ -1,6 +1,6 @@
 import JustValidate from 'just-validate';
 import Swiper from 'swiper';
-import { Navigation, Pagination, A11y } from 'swiper/modules';
+import {Navigation, Pagination, A11y} from 'swiper/modules';
 
 const header = document.querySelector('[data-header]');
 const burger = document.querySelector('[data-burger]');
@@ -25,7 +25,7 @@ if (burger && nav) {
 
 const onScroll = () => header?.classList.toggle('header--scrolled', window.scrollY > 4);
 onScroll();
-window.addEventListener('scroll', onScroll, { passive: true });
+window.addEventListener('scroll', onScroll, {passive: true});
 
 document.querySelectorAll('.nav__link').forEach((a) => {
     const href = new URL(a.getAttribute('href'), location.origin).pathname;
@@ -42,19 +42,19 @@ if (formEl) {
     });
 
     v.addField('#name', [
-        { rule: 'required' },
-        { rule: 'minLength', value: 1 },
-        { rule: 'maxLength', value: 50 },
+        {rule: 'required'},
+        {rule: 'minLength', value: 1},
+        {rule: 'maxLength', value: 50},
     ])
         .addField('#email', [
-            { rule: 'required' },
-            { rule: 'email' },
+            {rule: 'required'},
+            {rule: 'email'},
         ])
         .addField('#question', [
-            { rule: 'required' },
-            { rule: 'minLength', value: 10 },
+            {rule: 'required'},
+            {rule: 'minLength', value: 10},
         ])
-        .addField('#agree', [{ rule: 'required' }])
+        .addField('#agree', [{rule: 'required'}])
         .onSuccess((e) => {
             e.preventDefault();
         });
@@ -67,9 +67,9 @@ if (worksEl) {
         slidesPerView: 3,
         spaceBetween: 35,
         rewind: true,
-        navigation: { nextEl: '.works__nav--next', prevEl: '.works__nav--prev' },
-        pagination: { el: '.works__pagination', clickable: true },
-        a11y: { enabled: true }
+        navigation: {nextEl: '.works__nav--next', prevEl: '.works__nav--prev'},
+        pagination: {el: '.works__pagination', clickable: true},
+        a11y: {enabled: true}
     });
 }
 
@@ -82,11 +82,14 @@ if (newsletter) {
         lockForm: true
     });
     nv.addField('#newsletterEmail', [
-        { rule: 'required' },
-        { rule: 'email' }
-    ]).addField('#newsletterAgree', [
-        { rule: 'required' }
-    ]).onSuccess((e) => {
-        e.preventDefault();
-    });
+        {rule: 'required'},
+        {rule: 'email'}
+    ])
+        .addField('#newsletterAgree', [
+            {rule: 'required'}
+        ])
+        .onSuccess((e) => {
+            e.preventDefault();
+        });
 }
+
