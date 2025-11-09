@@ -35,6 +35,13 @@
     width: 100%;
 }
 
+.masthead .header {
+    width: min(100vw, var(--page));
+    margin-left: calc(-1 * (var(--left) + var(--gap)));
+    padding-right: var(--right);
+    position: relative;
+}
+
 .masthead__promo {
     display: grid;
     grid-template-columns: 1fr max-content;

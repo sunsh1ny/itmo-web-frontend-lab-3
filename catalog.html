@@ -7,7 +7,8 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;1,400&display=swap"
+          rel="stylesheet"/>
     <link rel="stylesheet" href="/src/sass/style.scss"/>
 </head>
 <body>
@@ -15,15 +16,19 @@
 <header class="header" data-header>
     <div class="header__inner">
         <a href="/index.html" class="header__logo">
-            <img src="/src/logo/logo.png" alt="Ceramic Soul logo"/>
+            <img src="/src/logo/logo.png" alt="Ceramic Soul logo">
         </a>
-        <div class="header__icons">
-            <a class="header__icon" href="#"><span class="icon-search" aria-hidden="true"></span><span class="sr-only">Search</span></a>
-            <a class="header__icon" href="#"><span class="icon-shopping-bag" aria-hidden="true"></span><span class="sr-only">Cart</span></a>
-        </div>
-        <nav id="site-nav" class="nav" data-nav>
+
+        <a class="header__icon" data-icon="search" href="#">
+            <img src="/src/img/icons/search-outline.svg" alt="search"/>
+        </a>
+        <a class="header__icon" data-icon="cart" href="#">
+            <img src="/src/img/icons/shopping-bag.svg" alt="shopping-bag"/>
+        </a>
+
+        <nav id="site-nav" class="nav" data-nav aria-label="Main">
             <ul class="nav__list" role="list">
-                <li><a class="nav__link" href="#">Catalog</a></li>
+                <li><a class="nav__link" href="catalog.html">Catalog</a></li>
                 <li><a class="nav__link" href="#">Blog</a></li>
                 <li><a class="nav__link" href="#">About</a></li>
             </ul>
@@ -31,13 +36,15 @@
     </div>
 </header>
 
+
 <section class="catalog" aria-labelledby="catalog-title">
     <div class="catalog__frame">
         <h1 id="catalog-title" class="catalog__title">OUR POTTERY</h1>
 
         <div class="catalog__filters" role="tablist" aria-label="Categories">
             <button class="catalog__filter active" role="tab" aria-selected="true" data-category="tea">FOR TEA</button>
-            <button class="catalog__filter" role="tab" aria-selected="false" data-category="kitchen">FOR KITCHEN</button>
+            <button class="catalog__filter" role="tab" aria-selected="false" data-category="kitchen">FOR KITCHEN
+            </button>
             <button class="catalog__filter" role="tab" aria-selected="false" data-category="plants">FOR PLANTS</button>
         </div>
 
@@ -56,7 +63,8 @@
                 <h3 class="footer__title">NEWSLETTER</h3>
                 <p class="footer__text">Keep up to date with news and promotions</p>
                 <form id="newsletterForm" class="footer__form" action="#" novalidate>
-                    <input class="footer__input" id="newsletterEmail" type="email" placeholder="Enter your e-mail" aria-label="Email">
+                    <input class="footer__input" id="newsletterEmail" type="email" placeholder="Enter your e-mail"
+                           aria-label="Email">
                     <label class="footer__agree" for="newsletterAgree">
                         <input class="footer__checkbox" id="newsletterAgree" type="checkbox">
                         <span>I agree with the <a class="footer__terms" href="#">terms</a></span>
@@ -90,9 +98,12 @@
             <div class="footer__social">
                 <h3 class="footer__title">FOLLOW US</h3>
                 <div class="footer__icons">
-                    <a class="footer__icon" href="#" aria-label="Facebook"><img src="src/img/icons/facebook.svg" alt="Facebook"></a>
-                    <a class="footer__icon" href="#" aria-label="Instagram"><img src="src/img/icons/instagram.svg" alt="Instagram"></a>
-                    <a class="footer__icon" href="#" aria-label="Pinterest"><img src="src/img/icons/pinterest.svg" alt="Pinterest"></a>
+                    <a class="footer__icon" href="#" aria-label="Facebook"><img src="src/img/icons/facebook.svg"
+                                                                                alt="Facebook"></a>
+                    <a class="footer__icon" href="#" aria-label="Instagram"><img src="src/img/icons/instagram.svg"
+                                                                                 alt="Instagram"></a>
+                    <a class="footer__icon" href="#" aria-label="Pinterest"><img src="src/img/icons/pinterest.svg"
+                                                                                 alt="Pinterest"></a>
                 </div>
             </div>
         </div>

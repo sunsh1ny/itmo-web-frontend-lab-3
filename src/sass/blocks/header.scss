@@ -1,73 +1,71 @@
 @use "/src/sass/base/variables.scss" as *;
 
 :root {
+    --page: 1920px;
     --header-logo-w: 150px;
     --header-logo-h: 150px;
-    --nav-offset-top: 39px;
-    --search-right: 390px;
-    --icon-gap: 15px;
+    --nav-offset-top: 38px;
+    --search-right: 275px;
+    --icon-gap: 35px;
 }
 
 .header {
-    width: 1920px;
-    margin: 0 auto;
+    width: min(100%, var(--page));
+    margin-inline: auto;
     position: relative;
 
     &__inner {
-        width: 100%;
-        height: calc(var(--header-logo-h) + var(--nav-offset-top) + 44px);
-        box-sizing: border-box;
         position: relative;
+        display: grid;
+        grid-template-rows: var(--header-logo-h) var(--nav-offset-top) max-content;
     }
 
     &__logo {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
+        justify-self: center;
+        align-self: center;
         width: var(--header-logo-w);
         height: var(--header-logo-h);
         display: block;
-    }
 
-    &__icons {
-
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
     }
 
     &__icon {
         position: absolute;
-        top: 12px;
-        width: 24px;
-        height: 24px;
+        width: 20px;
+        height: 20px;
         color: $dark;
+        display: inline-grid;
+        place-items: center;
+        text-decoration: none;
+    }
 
-        &:first-child {
-            right: var(--search-right);
-        }
+    &__icon[data-icon="search"] {
+        right: var(--search-right);
+    }
 
-        &:nth-child(2) {
-            right: calc(var(--search-right) - var(--icon-gap));
-        }
+    &__icon[data-icon="cart"] {
+        right: calc(var(--search-right) - var(--icon-gap));
     }
 }
 
-.burger {
-    display: none;
-}
-
 .nav {
-    position: absolute;
-    left: 50%;
-    top: calc(var(--header-logo-h) + var(--nav-offset-top));
-    transform: translateX(-50%);
-    margin: 0;
-    padding: 0;
+    grid-row: 3;
+    justify-self: center;
 
     &__list {
+        margin: 0;
+        padding: 0;
         display: flex;
         gap: 60px;
         align-items: center;
         justify-content: center;
+        list-style: none;
     }
 
     &__link {
@@ -80,14 +78,3 @@
     }
 }
 
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
