@@ -7,7 +7,7 @@ const card = (a) => {
     const imgSrc = a.image ? new URL(a.image, API_BASE).toString() : "";
     return `
     <article class="post" data-id="${a.id}">
-      <img class="post__img" src="${imgSrc}" alt="${a.title}" width="285" height="180" loading="lazy">
+      <img class="post__img" src="${imgSrc}" alt="${a.title}" loading="lazy">
       <div class="post__body">
         <h3 class="post__title">${a.title}</h3>
         <a class="btn-default post__btn" href="../../index.html">READ</a>

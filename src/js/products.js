@@ -6,7 +6,7 @@ function productToHTML(p) {
     const src = new URL(p.image, API_BASE).toString();
     return `
     <article class="catalog__card" data-id="${p.id}" data-category="${p.category}">
-      <img class="catalog__img" src="${src}" alt="${p.title}" width="285" height="180" loading="lazy">
+      <img class="catalog__img" src="${src}" alt="${p.title}" loading="lazy">
       <div class="catalog__meta">
         <span class="catalog__name">${p.title}</span>
         <span class="catalog__price">${p.price.toFixed(2)} ${sym(p.currency)}</span>
