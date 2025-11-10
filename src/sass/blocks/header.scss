@@ -79,3 +79,137 @@
     }
 }
 
+.burger {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    width: 36px;
+    height: 36px;
+    display: none;
+    border: 1px solid $dark;
+    border-radius: 4px;
+    background: transparent;
+    padding: 0;
+    outline: none;
+}
+
+.burger__bar {
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    height: 2px;
+    background: $dark;
+    transform-origin: center;
+    transition: transform .2s ease, opacity .2s ease, top .2s ease;
+}
+
+.burger__bar:nth-child(1) {
+    top: 10px;
+}
+
+.burger__bar:nth-child(2) {
+    top: 17px;
+}
+
+.burger__bar:nth-child(3) {
+    top: 24px;
+}
+
+.burger.is-active .burger__bar:nth-child(1) {
+    top: 17px;
+    transform: rotate(45deg);
+}
+
+.burger.is-active .burger__bar:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.is-active .burger__bar:nth-child(3) {
+    top: 17px;
+    transform: rotate(-45deg);
+}
+
+@media (max-width: 1200px) {
+    :root {
+        --search-right: 56px;
+        --icon-gap: 35px;
+    }
+    .header {
+        margin-top: 50px;
+    }
+    .nav__list {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --search-right: 180px;
+        --icon-gap: 22px;
+    }
+    .header {
+        margin-top: 24px;
+    }
+    .nav__list {
+        gap: 36px;
+    }
+}
+
+@media (max-width: 360px) {
+    :root {
+        --header-logo-w: 110px;
+        --header-logo-h: 110px;
+        --nav-offset-top: 20px;
+        --search-right: 54px;
+        --icon-gap: 18px;
+    }
+
+    .header {
+        margin-top: 16px;
+    }
+
+    .burger {
+        display: inline-block;
+    }
+
+    .nav {
+        grid-row: 3;
+        justify-self: stretch;
+        width: 100%;
+        position: absolute;
+        top: calc(var(--header-logo-h) + var(--nav-offset-top));
+        left: 0;
+        background: $light;
+        border-top: 1px solid $dark;
+        transform: translateY(-16px);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .15s ease, transform .15s ease;
+    }
+
+    .nav.is-open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        gap: 0;
+        align-items: stretch;
+    }
+
+    .nav__list > li {
+        border-bottom: 1px solid $dark;
+    }
+    .nav__link {
+        display: block;
+        padding: 14px 16px;
+        font-size: 18px;
+    }
+
+    .header__icon[data-icon="search"],
+    .header__icon[data-icon="cart"] {
+        top: 20px;
+    }
+}
