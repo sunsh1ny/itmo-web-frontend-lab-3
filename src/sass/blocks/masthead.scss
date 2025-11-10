@@ -96,7 +96,6 @@
 
 @media (max-width: 1200px) {
     :root {
-        --page: 1200px;
         --header-logo-w: 100px;
         --header-logo-h: 100px;
         --nav-offset-top: 20px;
@@ -111,10 +110,11 @@
     .masthead {
         --left: 328px;
         --gap: 56px;
-        --right: 222px;
+        --right: 30px;
     }
 
     .masthead__promo {
+        grid-template-columns: minmax(0, 1fr) max-content;
         margin-left: auto;
         margin-right: var(--right);
         margin-top: 50px;

@@ -15,11 +15,11 @@
 .footer__top {
     display: flex;
     align-items: flex-start;
+    gap: 314px;
 }
 
 .footer__newsletter {
     width: 293px;
-    margin-right: 314px;
 }
 
 .footer__title {
@@ -144,7 +144,7 @@
 .footer__links {
     display: flex;
     align-items: flex-start;
-    gap: 120px;
+    gap: 66px;
 }
 
 .footer__list {
@@ -190,4 +190,65 @@
     font-size: 14px;
     font-weight: 400;
     color: $light
+}
+
+@media (max-width: 1200px) {
+    @media (max-width: 1200px) {
+        .footer {
+            width: min(100%, 1200px);
+        }
+    }
+
+    .footer__top {
+        gap: 132px;
+    }
+
+    .footer__frame {
+        padding: 50px 30px 50px;
+    }
+
+    .footer__links {
+        gap: 66px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer__frame {
+        padding: 60px 80px 36px;
+    }
+    .footer__newsletter {
+        margin-right: 180px;
+    }
+    .footer__links {
+        gap: 60px;
+    }
+}
+
+@media (max-width: 360px) {
+    .footer__frame {
+        padding: 32px 16px;
+    }
+    .footer__top {
+        flex-direction: column;
+        gap: 28px;
+    }
+    .footer__newsletter {
+        width: 100%;
+        margin-right: 0;
+    }
+    .footer__input {
+        width: 100%;
+    }
+    .footer__links {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .footer__social {
+        margin-left: 0;
+        width: 100%;
+    }
+    .footer__bottom {
+        margin-top: 14px;
+        font-size: 12px;
+    }
 }

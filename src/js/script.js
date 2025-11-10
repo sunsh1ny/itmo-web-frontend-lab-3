@@ -64,14 +64,24 @@ const worksEl = document.querySelector('.works__slider');
 if (worksEl) {
     new Swiper(worksEl, {
         modules: [Navigation, Pagination, A11y],
+        rewind: true,
+        a11y: { enabled: true },
+        navigation: { nextEl: '.works__nav--next', prevEl: '.works__nav--prev' },
+        pagination: { el: '.works__pagination', clickable: true },
+
         slidesPerView: 3,
         spaceBetween: 35,
-        rewind: true,
-        navigation: {nextEl: '.works__nav--next', prevEl: '.works__nav--prev'},
-        pagination: {el: '.works__pagination', clickable: true},
-        a11y: {enabled: true}
+
+        breakpoints: {
+            1200: { slidesPerView: 3, spaceBetween: 5 },
+            768:  { slidesPerView: 2, spaceBetween: 20 },
+            360:  { slidesPerView: 1, spaceBetween: 12 }
+        },
+
+        watchOverflow: true
     });
 }
+
 
 const newsletter = document.querySelector('#newsletterForm');
 if (newsletter) {

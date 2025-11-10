@@ -60,7 +60,73 @@
     color: $dark;
 }
 
+
 .create-buy__text .accent {
     font-weight: 500;
     color: $ceramic;
+}
+
+@media (max-width: 1200px) {
+    .create-buy {
+        --w: 1140px;
+        margin-top: 60px;
+    }
+
+    .create-buy__grid {
+        grid-template-columns: 436px 664px;
+    }
+
+    .create-buy__img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        display: block;
+        box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, .25);
+    }
+
+    .create-buy__text {
+        width: 100%;
+        margin-top: 25px;
+    }
+}
+
+.create-buy__text--hard {
+    width: 556px;
+    height: 120px;
+}
+
+@media (max-width: 768px) {
+    .create-buy {
+        --w: 728px;
+        margin-top: 72px;
+    }
+    .create-buy__title {
+        margin-bottom: 40px;
+    }
+
+    .create-buy__text {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 360px) {
+    .create-buy {
+        --w: 320px;
+        margin-top: 56px;
+    }
+    .create-buy__title {
+        font-size: 28px;
+        margin-bottom: 24px;
+    }
+    .create-buy__grid {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+    .create-buy__text {
+        width: 100%;
+        font-size: 16px;
+    }
+    .create-buy__img {
+        height: 220px;
+    }
 }
