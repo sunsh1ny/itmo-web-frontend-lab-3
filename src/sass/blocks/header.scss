@@ -18,7 +18,7 @@
     &__inner {
         position: relative;
         display: grid;
-        grid-template-rows: var(--header-logo-h) var(--nav-offset-top) max-content;
+        grid-template-rows: var(--header-logo-h) calc(var(--nav-offset-top) + 2px) max-content;
     }
 
     &__logo {

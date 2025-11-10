@@ -24,7 +24,7 @@ async function renderProducts(category = "tea") {
     const grid = document.querySelector(".catalog__grid");
     if (!grid) return;
 
-    grid.innerHTML = `<div class="loading">Loading…</div>`;
+    grid.innerHTML = `<div class="loading">Loading...</div>`;
 
     try {
         const data = await fetchProducts();
