@@ -3,7 +3,7 @@
 
 .footer {
     width: min(100%, 1920px);;
-    margin: 100px auto 0;
+    margin: 0 auto;
     background: $dark;
     color: $light;
 }
@@ -121,6 +121,7 @@
     font-weight: 400;
     letter-spacing: 0;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .footer__input.is-error {

@@ -4,12 +4,13 @@
     --page: 1920px;
     --header-logo-w: 150px;
     --header-logo-h: 150px;
-    --nav-offset-top: 38px;
+    --nav-offset-top: 36px;
     --search-right: 275px;
     --icon-gap: 35px;
 }
 
 .header {
+    margin-top: 40px;
     width: min(100%, var(--page));
     margin-inline: auto;
     position: relative;

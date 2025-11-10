@@ -1,48 +1,52 @@
 @use "/src/sass/base/variables.scss" as *;
 
-.masthead {
+:root {
     --page: 1920px;
+    --header-logo-w: 150px;
+    --header-logo-h: 150px;
+    --nav-offset-top: 36px;
+    --header-h: calc(var(--header-logo-h) + var(--nav-offset-top) + 60px);
+}
+
+.header {
+    width: min(100%, var(--page));
+    margin-inline: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.masthead {
     --left: 720px;
     --gap: 73px;
     --right: 240px;
 
     width: min(100%, var(--page));
     margin-inline: auto;
+    position: relative;
 
     display: grid;
     grid-template-columns: var(--left) 1fr;
     column-gap: var(--gap);
 }
 
-
-.masthead__left {
-    align-self: start;
-}
-
-.masthead__left img {
-    display: block;
+.masthead__hero {
+    position: absolute;
+    top: calc(-1 * var(--header-h));
+    left: 0;
     width: 640px;
     height: 900px;
+    object-fit: cover;
+    z-index: 1;
 }
 
 .masthead__right {
-    padding-top: 40px;
+    grid-column: 2;
+    padding-top: 2px;
     padding-right: var(--right);
-}
-
-.masthead .header__inner,
-.masthead__promo {
-    width: 100%;
-}
-
-.masthead .header {
-    width: min(100vw, var(--page));
-    margin-left: calc(-1 * (var(--left) + var(--gap)));
-    padding-right: var(--right);
-    position: relative;
 }
 
 .masthead__promo {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr max-content;
     grid-template-rows: max-content max-content;
@@ -70,15 +74,22 @@
     width: 330px;
     height: 460px;
     object-fit: cover;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, .25));
 }
 
 .masthead__promo-btn {
     width: 330px;
-    height: 61px;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     grid-column: 2;
     grid-row: 2;
-    justify-self: end;
+    justify-self: center;
+    align-self: center;
     margin-top: 50px;
+    text-decoration: none;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
 }
-
-

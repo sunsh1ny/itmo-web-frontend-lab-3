@@ -4,7 +4,6 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="Website for Ceramic soul brand"/>
-    <meta name="author" content="Awesome student"/>
     <title>Ceramic soul</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -14,37 +13,32 @@
     <link rel="stylesheet" href="/src/sass/style.scss"/>
 </head>
 <body>
-<section class="masthead">
-    <div class="masthead__left">
-        <img src="/src/img/promo/potter.jpg" alt="Potter at the wheel"/>
+
+<header class="header" data-header>
+    <div class="header__inner">
+        <a href="/index.html" class="header__logo">
+            <img src="/src/logo/logo.png" alt="Ceramic Soul logo">
+        </a>
+        <a class="header__icon" data-icon="search" href="#"><img src="/src/img/icons/search-outline.svg" alt="search"/></a>
+        <a class="header__icon" data-icon="cart" href="#"><img src="/src/img/icons/shopping-bag.svg"
+                                                               alt="shopping-bag"/></a>
+        <nav id="site-nav" class="nav" data-nav aria-label="Main">
+            <ul class="nav__list" role="list">
+                <li><a class="nav__link" href="catalog.html">Catalog</a></li>
+                <li><a class="nav__link" href="#">Blog</a></li>
+                <li><a class="nav__link" href="#">About</a></li>
+            </ul>
+        </nav>
     </div>
+</header>
+
+<section class="masthead">
+    <img class="masthead__hero" src="/src/img/promo/potter.jpg" alt="Potter at the wheel">
     <div class="masthead__right">
-        <header class="header" data-header>
-            <div class="header__inner">
-                <a href="/index.html" class="header__logo">
-                    <img src="/src/logo/logo.png" alt="Ceramic Soul logo">
-                </a>
-
-                <a class="header__icon" data-icon="search" href="#">
-                    <img src="/src/img/icons/search-outline.svg" alt="search"/>
-                </a>
-                <a class="header__icon" data-icon="cart" href="#">
-                    <img src="/src/img/icons/shopping-bag.svg" alt="shopping-bag"/>
-                </a>
-
-                <nav id="site-nav" class="nav" data-nav aria-label="Main">
-                    <ul class="nav__list" role="list">
-                        <li><a class="nav__link" href="catalog.html">Catalog</a></li>
-                        <li><a class="nav__link" href="#">Blog</a></li>
-                        <li><a class="nav__link" href="#">About</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
         <div class="masthead__promo">
-            <h1 class="title-h1-italic">Make your dream come true<br/>or decorate your home</h1>
-            <img class="masthead__promo-img" src="/src/img/promo/ceramic-vase.jpg" alt="vase"/>
-            <button class="btn-default masthead__promo-btn">shop now</button>
+            <h1 class="title-h1-italic">Make your dream come true<br>or decorate your home</h1>
+            <img class="masthead__promo-img" src="/src/img/promo/ceramic-vase.jpg" alt="vase">
+            <a href="catalog.html" class="btn-default masthead__promo-btn">shop now</a>
         </div>
     </div>
 </section>
@@ -138,8 +132,6 @@
 
 <footer class="footer" aria-labelledby="footer-title">
     <div class="footer__frame">
-        <h2 id="footer-title" class="sr-only">Footer</h2>
-
         <div class="footer__top">
             <div class="footer__newsletter">
                 <h3 class="footer__title">NEWSLETTER</h3>
