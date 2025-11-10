@@ -3,46 +3,167 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>About — Ceramic soul</title>
+    <title>Ceramic soul — About</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;1,400&display=swap"
           rel="stylesheet"/>
     <link rel="stylesheet" href="/src/sass/style.scss"/>
 </head>
 <body>
+
 <header class="header" data-header>
     <div class="header__inner">
-        <button class="burger" data-burger aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
-            <span></span><span></span><span></span>
-        </button>
-
         <a href="/index.html" class="header__logo">
-            <img src="/src/logo/logo.png" alt="Ceramic Soul logo"/>
+            <img src="/src/logo/logo.png" alt="Ceramic Soul logo">
         </a>
-
-        <div class="header__icons">
-            <a class="header__icon" href="#"><span class="icon-search" aria-hidden="true"></span><span class="sr-only">Search</span></a>
-            <a class="header__icon" href="#"><span class="icon-shopping-bag" aria-hidden="true"></span><span
-                    class="sr-only">Cart</span></a>
-        </div>
-
-        <nav id="site-nav" class="nav" data-nav>
+        <a class="header__icon" data-icon="search" href="#"><img src="/src/img/icons/search-outline.svg" alt="search"/></a>
+        <a class="header__icon" data-icon="cart" href="#"><img src="/src/img/icons/shopping-bag.svg"
+                                                               alt="shopping-bag"/></a>
+        <nav id="site-nav" class="nav" data-nav aria-label="Main">
             <ul class="nav__list" role="list">
-                <li><a class="nav__link" href="/catalog.html">Catalog</a></li>
-                <li><a class="nav__link" href="/blog.html">Blog</a></li>
-                <li><a class="nav__link" href="/about.html">About</a></li>
+                <li><a class="nav__link" href="catalog.html">Catalog</a></li>
+                <li><a class="nav__link" href="blog.html">Blog</a></li>
+                <li><a class="nav__link" href="about.html">About</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
+<section class="about" aria-labelledby="about-title">
+    <div class="about__frame">
+        <h1 id="about-title" class="about__title">WHERE IT ALL BEGAN</h1>
+        <div class="about__stage">
+            <img class="about__img" src="/src/img/about/crafts.jpg" alt="Potter working at the wheel">
+            <div class="about__text">
+                <p>Our small pottery workshop began as a simple passion project, rooted in a love for handmade artistry
+                    and traditional craftsmanship. What started with a single wheel and a few lumps of clay has grown
+                    into a cozy creative space where ideas take shape and stories are told through every piece. Inspired
+                    by timeless techniques and the beauty of natural materials, we’ve built a place where both beginners
+                    and experienced artists can come together, share their skills, and celebrate the art of pottery.
+                    Each creation reflects our journey—shaped by hand, fired with care, and made to be cherished.
+                </p>
+                <p>
+                    Over the years, our workshop has become more than just a place to create—it’s a community. Friends,
+                    families, and curious visitors gather here to learn, connect, and experience the joy of working with
+                    clay. From intimate masterclasses to collaborative projects, we believe in the power of handmade art
+                    to bring people together and spark creativity in unexpected ways.
+                </p>
+                <p>
+                    Every piece that leaves our studio carries a bit of our story, blending tradition with personal
+                    expression. Whether it’s a simple cup or an intricate vase, our ceramics are crafted to be both
+                    beautiful and functional, adding warmth and authenticity to any space.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 
-<main>
-    <section class="container" style="padding-block:40px 80px;">
-        <h1 class="title-h1-italic" style="text-align:center;">WHERE IT ALL BEGAN</h1>
-        <!-- сюда основной текст + изображение -->
-    </section>
-</main>
+<section class="contact" aria-labelledby="contact-title">
+    <div class="contact__frame">
+        <h2 id="contact-title" class="contact__title">GET IN TOUCH</h2>
+        <div class="contact__grid">
+            <img class="contact__img" src="/src/img/form/tea.jpg" alt="Tea set">
+            <form id="contactForm" class="contact__form" novalidate>
+                <div class="contact__row">
+                    <div class="contact__field" id="name-field">
+                        <label class="contact__label" for="name">Name</label>
+                        <input id="name" name="name" type="text" placeholder="Name" class="contact__input">
+                    </div>
+                    <div class="contact__field" id="email-field">
+                        <label class="contact__label" for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="Email" class="contact__input">
+                    </div>
+                </div>
+                <div class="contact__row contact__row--full">
+                    <div class="contact__field" id="question-field">
+                        <label class="contact__label" for="question">Your question</label>
+                        <textarea id="question" name="question" placeholder="Question"
+                                  class="contact__textarea"></textarea>
+                    </div>
+                </div>
+                <label class="contact__agree">
+                    <input id="agree" name="agree" type="checkbox" class="contact__checkbox">
+                    <span>I agree with the <a href="#">terms</a></span>
+                </label>
+                <button type="submit" class="btn-default contact__submit">SEND REQUEST</button>
+            </form>
+            <img class="contact__sticker" src="/src/img/form/vase.png" alt="" aria-hidden="true">
+        </div>
+    </div>
+</section>
+
+<section class="map" aria-labelledby="map-title">
+    <div class="map__frame">
+        <h2 id="map-title" class="map__title">FIND US</h2>
+        <div class="map__embed">
+            <iframe
+                    src="https://www.google.com/maps?q=CLAY+SPACE+Ceramic+Center,275+Calyer+St,+Brooklyn,+NY+11222&z=15&output=embed"
+                    width="800"
+                    height="450"
+                    style="border:0"
+                    allowfullscreen
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    aria-label="CLAY SPACE Ceramic Center on map">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<footer class="footer" aria-labelledby="footer-title">
+    <div class="footer__frame">
+        <div class="footer__top">
+            <div class="footer__newsletter">
+                <h3 class="footer__title">NEWSLETTER</h3>
+                <p class="footer__text">Keep up to date with news and promotions</p>
+                <form id="newsletterForm" class="footer__form" action="#" novalidate>
+                    <input class="footer__input" id="newsletterEmail" type="email" placeholder="Enter your e-mail"
+                           aria-label="Email">
+                    <label class="footer__agree" for="newsletterAgree">
+                        <input class="footer__checkbox" id="newsletterAgree" type="checkbox">
+                        <span>I agree with the <a class="footer__terms" href="#">terms</a></span>
+                    </label>
+                    <button class="footer__btn" type="submit">SUBMIT</button>
+                </form>
+            </div>
+            <nav class="footer__links" aria-label="Footer navigation">
+                <div class="footer__col">
+                    <h3 class="footer__title">DISCOVER</h3>
+                    <ul class="footer__list" role="list">
+                        <li><a class="footer__link" href="about.html">About Us</a></li>
+                        <li><a class="footer__link" href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">SHOPPING</h3>
+                    <ul class="footer__list" role="list">
+                        <li><a class="footer__link" href="catalog.html">Catalog</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__title">INFORMATION</h3>
+                    <ul class="footer__list" role="list">
+                        <li><a class="footer__link" href="#">Terms and Conditions</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="footer__social">
+                <h3 class="footer__title">FOLLOW US</h3>
+                <div class="footer__icons">
+                    <a class="footer__icon" href="#" aria-label="Facebook"><img src="src/img/icons/facebook.svg"
+                                                                                alt="Facebook"></a>
+                    <a class="footer__icon" href="#" aria-label="Instagram"><img src="src/img/icons/instagram.svg"
+                                                                                 alt="Instagram"></a>
+                    <a class="footer__icon" href="#" aria-label="Pinterest"><img src="src/img/icons/pinterest.svg"
+                                                                                 alt="Pinterest"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">© Copyright 2025, Ceramic soul</div>
+    </div>
+</footer>
 
 <script type="module" src="/src/js/script.js"></script>
 </body>

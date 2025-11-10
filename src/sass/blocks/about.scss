@@ -1,0 +1,68 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as m;
+
+.about {
+    --w: 1365px;
+    margin: 102px auto 0;
+}
+
+.about__frame {
+    width: var(--w);
+    margin-inline: auto;
+    background: $light;
+    box-sizing: border-box;
+}
+
+.about__title {
+    @include m.title;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.about__stage {
+    display: grid;
+    grid-template-columns: 700px 1fr;
+    column-gap: 20px;
+    align-items: start;
+}
+
+.about__img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, .25);
+}
+
+.about__text {
+    display: grid;
+    gap: 20px;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: $dark;
+}
+
+.map {
+    --w: 1000px;
+    margin: 100px auto 60px;
+}
+
+.map__frame {
+    width: var(--w);
+    margin-inline: auto;
+    background: $light;
+    box-sizing: border-box;
+}
+
+.map__title {
+    @include m.title;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.map__embed {
+    display: grid;
+    place-items: center;
+}
