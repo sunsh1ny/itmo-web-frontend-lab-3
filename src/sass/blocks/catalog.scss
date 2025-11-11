@@ -154,23 +154,22 @@
 
 @media (max-width: 768px) {
     .catalog {
-        --stage-w: 728px;
-        margin-top: 72px;
+        --stage-w: 720px;
+        margin-top: 60px;
     }
+
     .catalog__title {
-        margin-bottom: 40px;
+        font-size: 36px;
     }
+
     .catalog__stage {
-        padding: 18px 18px 40px;
+        padding: 10px 10px 0 10px;
     }
-    .catalog__filters {
-        margin-bottom: 40px;
-        gap: 28px;
-        height: 54px;
-    }
+
     .catalog__grid {
-        grid-template-columns: repeat(3, 285px);
-        gap: 40px;
+        grid-template-columns: repeat(2, 325px);
+        gap: 20px 35px;
+        margin-bottom: 60px;
     }
 }
 

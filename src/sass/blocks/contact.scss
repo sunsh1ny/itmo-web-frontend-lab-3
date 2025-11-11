@@ -208,17 +208,42 @@
 
 @media (max-width: 768px) {
     .contact {
-        --w: 728px;
-        margin-top: 72px;
+        --w: 696px;
+        margin-top: 60px;
     }
+
     .contact__title {
-        margin-bottom: 40px;
+        font-size: 36px;
+        margin-bottom: 45px;
     }
+
     .contact__grid {
-        column-gap: 28px;
+        grid-template-columns: 0 1fr;
+        row-gap: 30px;
+        column-gap: 40px;
+        align-items: start;
     }
+
+    .contact__img {
+        width: 550px;
+        height: 342px;
+        order: 1;
+    }
+
+    .contact__form {
+        grid-template-columns: 1fr;
+        max-width: 696px;
+        order: 2;
+    }
+
     .contact__row {
-        gap: 24px;
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .contact__input,
+    .contact__textarea {
+        width: 300px;
     }
 }
 

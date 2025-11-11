@@ -74,8 +74,8 @@ if (worksEl) {
 
         breakpoints: {
             1200: { slidesPerView: 3, spaceBetween: 5 },
-            768:  { slidesPerView: 2, spaceBetween: 20 },
-            360:  { slidesPerView: 1, spaceBetween: 12 }
+            768:  { slidesPerView: 1, spaceBetween: 0 },
+            360:  { slidesPerView: 1, spaceBetween: 0 }
         },
 
         watchOverflow: true

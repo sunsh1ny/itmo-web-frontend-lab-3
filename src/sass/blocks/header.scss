@@ -144,14 +144,14 @@
 
 @media (max-width: 768px) {
     :root {
-        --search-right: 180px;
-        --icon-gap: 22px;
+        --search-right: 52px;
+        --icon-gap: 35px;
     }
     .header {
         margin-top: 24px;
     }
     .nav__list {
-        gap: 36px;
+        gap: 30px;
     }
 }
 
