@@ -10,7 +10,7 @@ const card = (a) => {
       <img class="post__img" src="${imgSrc}" alt="${a.title}" loading="lazy">
       <div class="post__body">
         <h3 class="post__title">${a.title}</h3>
-        <a class="btn-default post__btn" href="../../index.html">READ</a>
+        <a class="btn-default post__btn" href="../.././">READ</a>
         <p class="post__excerpt">${a.excerpt ?? ""}</p>
       </div>
     </article>
