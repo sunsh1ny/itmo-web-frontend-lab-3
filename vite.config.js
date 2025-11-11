@@ -5,15 +5,17 @@ import {defineConfig} from "vite";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
-    base: "itmo-web-frontend-lab-3",
+    base: '/itmo-web-frontend-lab-3/',
+
     build: {
         rollupOptions: {
             input: {
-                main: resolve(__dirname, "index.html"),
-                catalog: resolve(__dirname, "catalog.scss.html"),
-                blog: resolve(__dirname, "blog.html"),
-                about: resolve(__dirname, "about.html"),
-            }
-        }
+                index:   resolve(__dirname, 'index.html'),
+                blog:    resolve(__dirname, 'blog.html'),
+                catalog: resolve(__dirname, 'catalog.html'),
+                about:   resolve(__dirname, 'about.html'),
+                contact: resolve(__dirname, 'contact.html'),
+            },
+        },
     },
 });
