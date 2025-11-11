@@ -5,7 +5,7 @@ import {defineConfig} from "vite";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
-    base: '/itmo-web-frontend-lab-3/',
+    base: '/',
 
     build: {
         rollupOptions: {
