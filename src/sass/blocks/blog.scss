@@ -149,27 +149,43 @@
 
 @media (max-width: 768px) {
     .blog {
-        --stage-w: 728px;
-        margin-top: 72px;
+        --stage-w: 695px;
+        margin-top: 60px;
     }
-    .blog__title {
-        margin-bottom: 40px;
-    }
+
     .blog__stage {
-        padding: 18px 18px 60px;
+        padding-bottom: 20px;
     }
+
+    .blog__title {
+        font-size: 36px;
+    }
+
     .blog__list {
-        column-gap: 28px;
+        column-count: 1;
+        column-gap: 50px;
     }
+
+    .post__img {
+        width: 260px;
+    }
+
+    .post__title {
+        text-align: left;
+    }
+
     .post {
-        padding: 18px;
+        grid-template-columns: 335px 1fr;
+        grid-template-rows: 215px auto;
+        row-gap: 15px;
+        padding: 24px;
         margin-bottom: 40px;
     }
     .post__img {
-        width: 300px;
-        height: 210px;
-        top: -18px;
-        left: -18px;
+        width: 335px;
+        height: 240px;
+        top: -25px;
+        left: -25px;
     }
 }
 

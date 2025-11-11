@@ -114,24 +114,32 @@
 
 @media (max-width: 768px) {
     .about {
-        --w: 728px;
-        margin-top: 72px;
+        --w: 720px;
+        margin-top: 60px;
     }
+
     .about__title {
-        margin-bottom: 60px;
+        font-size: 36px;
     }
+
     .about__stage {
-        column-gap: 14px;
+        grid-template-columns: var(--w);
+        row-gap: 35px;
     }
-    .about__text {
-        gap: 16px;
+
+    .about__img {
+        margin: 0 auto;
+        width: 600px;
+        object-fit: contain;
     }
+
     .map {
-        --w: 680px;
-        margin: 70px auto 40px;
+        --w: 663px;
+        margin: 60px auto;
     }
+
     .map__title {
-        margin-bottom: 40px;
+        font-size: 36px;
     }
 }
 
