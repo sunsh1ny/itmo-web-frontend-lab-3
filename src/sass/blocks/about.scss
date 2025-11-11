@@ -146,29 +146,35 @@
 @media (max-width: 360px) {
     .about {
         --w: 320px;
-        margin-top: 56px;
+        margin-top: 38px;
     }
+
     .about__title {
-        font-size: 28px;
-        margin-bottom: 32px;
+        font-size: 32px;
     }
+
     .about__stage {
-        grid-template-columns: 1fr;
-        row-gap: 16px;
+        grid-template-columns: var(--w);
+        row-gap: 35px;
     }
-    .about__text {
-        font-size: 16px;
-        gap: 14px;
+
+    .about__img {
+        margin: 0 auto;
+        width: 600px;
+        object-fit: contain;
     }
+
     .map {
         --w: 320px;
-        margin: 40px auto 20px;
+        margin: 60px auto;
     }
+
     .map__title {
-        font-size: 28px;
-        margin-bottom: 20px;
+        font-size: 32px;
     }
+
     .map__embed {
-        padding-inline: 0;
+        width: 320px;
+        height: 206px;
     }
 }

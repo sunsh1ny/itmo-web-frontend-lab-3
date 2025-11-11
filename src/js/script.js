@@ -1,12 +1,13 @@
 import JustValidate from 'just-validate';
 import Swiper from 'swiper';
-import {Navigation, Pagination, A11y} from 'swiper/modules';
+import { Navigation, Pagination, A11y } from 'swiper/modules';
 
 const header = document.querySelector('[data-header]');
 const burger = document.querySelector('[data-burger]');
 const nav = document.querySelector('[data-nav]');
 
 function setMenu(open) {
+    if (!burger || !nav) return;
     nav.classList.toggle('is-open', open);
     burger.classList.toggle('is-active', open);
     burger.setAttribute('aria-expanded', String(open));
@@ -15,13 +16,10 @@ function setMenu(open) {
 
 if (burger && nav) {
     burger.addEventListener('click', () => setMenu(!nav.classList.contains('is-open')));
-    nav.addEventListener('click', (e) => {
-        if (e.target.matches('.nav__link')) setMenu(false);
-    });
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') setMenu(false);
-    });
+    nav.addEventListener('click', (e) => { if (e.target.matches('.nav__link')) setMenu(false); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
 }
+
 
 const onScroll = () => header?.classList.toggle('header--scrolled', window.scrollY > 4);
 onScroll();

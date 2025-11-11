@@ -155,17 +155,24 @@
 
 @media (max-width: 360px) {
     .works {
-        --w: 320px;
-        margin: 56px auto;
+        --w: 340px;
+        margin: 60px auto;
     }
+
     .works__title {
-        font-size: 28px;
-        margin-bottom: 24px;
+        font-size: 31.8px;
+        margin-bottom: 40px;
     }
-    .works__nav {
+
+    .works__nav svg {
         display: none;
     }
+
+    .works__stage {
+        padding-inline: 32px;
+    }
+
     .works__pagination {
-        padding-top: 12px;
+        padding-top: 25px;
     }
 }
